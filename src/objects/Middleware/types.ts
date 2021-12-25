@@ -7,9 +7,11 @@ interface MiddlewareProps {
 
 type CallbackProps = (
     request: Request, 
-    response: Response
+    response: Response,
+    tools: ToolsProps
 ) => void;
 
+type ToolsProps = { generateID: () => string };
 type ValidateRequest = (value: Request) => boolean;
 
 export type {

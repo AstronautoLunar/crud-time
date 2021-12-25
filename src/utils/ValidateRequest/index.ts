@@ -2,14 +2,7 @@ import { Request } from "express";
 
 import { DataGlobals } from "../../types";
 
-function validateRequest(request: Request) {
-    function returnIsPassed({
-        conditional,
-        message
-    }) {
-
-    }
-
+function validateRequest(request: Request): boolean {
     const { 
         id, 
         day, 
@@ -24,7 +17,7 @@ function validateRequest(request: Request) {
     const isTypeRainString = typeof typeRain === "string";
     const isHourNumber = typeof hour === "number";
     const isDistrictString = typeof district === "string";
-    const isCityString = typeof district === "string";
+    const isCityString = typeof city === "string";
     const isTodayPassed = 
         isIdString 
         && 
@@ -38,7 +31,7 @@ function validateRequest(request: Request) {
         &&
         isCityString;
 
-    
+    return isTodayPassed;
 }
 
 export default validateRequest

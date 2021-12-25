@@ -1,5 +1,7 @@
 import getAllTimes from "./getAllTimes";
+import addTime from "./addTime";
 
 export {
-    getAllTimes
+    getAllTimes,
+    addTime
 }

@@ -28,10 +28,19 @@ class Middleware {
         return this._callback;
     }
 
+    protected generateID(): string {
+        const numberRandom = Math.random() * 7;
+        const stringRandom = String(numberRandom);
+        const ID = stringRandom.substring(2, stringRandom.length);
+
+        return ID;
+    }
+
     public create() {
         const {
             validateRequest,
-            callback
+            callback,
+            generateID
         } = this;
 
         return (
@@ -39,6 +48,10 @@ class Middleware {
             response: Response
         ) => {
             try {
+                const tools = {
+                    generateID 
+                }
+
                 if(validateRequest) {
                     const errorOfRequest = validateRequest(request);
 
@@ -47,7 +60,7 @@ class Middleware {
                     }
                 }
 
-                callback(request, response);
+                callback(request, response, tools);
             } catch (error) {
                 response.status(500).send("Error ao executar a requisição");
             }

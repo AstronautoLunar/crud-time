@@ -1,5 +1,5 @@
 interface DataGlobals {
-    id: string;
+    id?: string;
     day: string;
     typeRain: string;
     hour: number;

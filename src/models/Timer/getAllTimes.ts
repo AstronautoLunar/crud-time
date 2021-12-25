@@ -1,6 +1,3 @@
-import { Request, response } from "express";
-
-import { DataGlobals } from "../../types";
 import { Middleware } from "../../objects";
 import { data } from "../../data";
 
