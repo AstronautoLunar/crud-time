@@ -1,8 +1,11 @@
-import { Express } from 'express';
+import { Express, Request, Response } from 'express';
 
 interface ServerProps {
     port: number;
     message: string;
 }
 
-export default ServerProps;
+export {
+    ServerProps,
+    Express
+};

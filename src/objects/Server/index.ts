@@ -1,9 +1,12 @@
-import ServerProps from './types';
+import {
+    ServerProps,
+    Express
+} from './types';
 
 class Server {
     private readonly _port: number;
     private readonly _message: string;
-    private readonly _app: any = require('express')()
+    private readonly _app: Express = require('express')()
 
     constructor({
         port,
@@ -33,6 +36,13 @@ class Server {
         } = this;
 
         app.listen(port, () => console.log(`${message}, localhost:${port}`));
+    }
+
+    public use(
+        route: string,
+        callback: any 
+    ):void {
+        this.app.use(route, callback)
     }
 }
 

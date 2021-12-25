@@ -1,4 +1,5 @@
 import { Server } from "../objects";
+import router from "../router/api";
 
 const server = new Server({
     port: 4444,
@@ -6,3 +7,5 @@ const server = new Server({
 });
 
 server.execute();
+
+server.use("/api", router);
