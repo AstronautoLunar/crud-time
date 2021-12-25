@@ -55,12 +55,16 @@ class Middleware {
                 if(validateRequest) {
                     const errorOfRequest = validateRequest(request);
 
-                    if(errorOfRequest) {
+                    if(!errorOfRequest) {
                         response.status(400).send("Sua resquisição não passou da validação");
+                    } else {
+                        callback(request, response, tools);
                     }
+                } else {
+                    callback(request, response, tools);
                 }
 
-                callback(request, response, tools);
+                
             } catch (error) {
                 response.status(500).send("Error ao executar a requisição");
             }
