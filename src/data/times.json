@@ -1,0 +1,28 @@
+{
+    "times": [
+        {
+            "id": "adfhaflasfdlhasff",
+            "day": "23/04/2014",
+            "typeRain": "Chuva Forte",
+            "hour": 14,
+            "district": "São Paulo",
+            "city": "São Paulo"
+        },
+        {
+            "id": "asdfjlasfhjjwer",
+            "day": "19/08/2015",
+            "typeRain": "Chuva Fraca",
+            "hour": 7,
+            "district": "São Paulo",
+            "city": "São Paulo"
+        },
+        {
+            "id": "fdfsfsfsadfajfff",
+            "day": "28/02/2018",
+            "typeRain": "Sem Chuva",
+            "hour": 10,
+            "district": "Rio de Janeiro",
+            "city": "Rio de Janeiro"
+        }
+    ]
+}
