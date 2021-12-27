@@ -3,10 +3,10 @@ import {
     Response 
 } from "express";
 
-import { Middleware } from "../../objects"
-import validateRequest from "../../utils/ValidateRequest"
-import { DataGlobals } from "../../types";
-import { data } from "../../data";
+import { Middleware } from "../../../objects"
+import validateRequest from "../../../utils/ValidateRequest"
+import { DataGlobals } from "../../../types";
+import { data } from "../../../data";
 
 const middleware = new Middleware({
     validateRequest,

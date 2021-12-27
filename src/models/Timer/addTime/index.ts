@@ -1,7 +1,7 @@
-import { Middleware } from "../../objects";
-import { data } from "../../data";
-import validateRequest from "../../utils/ValidateRequest";
-import { DataGlobals } from "../../types";
+import { Middleware } from "../../../objects";
+import { data } from "../../../data";
+import validateRequest from "../../../utils/ValidateRequest";
+import { DataGlobals } from "../../../types";
 
 const middleware = new Middleware({
     validateRequest,

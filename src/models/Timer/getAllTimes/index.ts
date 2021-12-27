@@ -1,5 +1,5 @@
-import { Middleware } from "../../objects";
-import { data } from "../../data";
+import { Middleware } from "../../../objects";
+import { data } from "../../../data";
 
 const middleware = new Middleware({ 
     callback: (request, response) => {
