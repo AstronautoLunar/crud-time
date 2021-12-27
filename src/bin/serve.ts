@@ -6,6 +6,6 @@ const server = new Server({
     message: "Executando servidor"
 });
 
-server.execute();
-
 server.use("/api", router);
+
+server.execute();
